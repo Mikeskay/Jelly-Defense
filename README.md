@@ -4,6 +4,7 @@
 The exercise is based on the game Jelly Defense (for
 IPhone/Andriod). It is a game where there are different kinds of Towers and Jellies. Through the game, Towers can attack Jellies and cause damage to them.
 
+Write the code so that it uses OO principles including:
 
 - Inheritance to represent the two different kinds of Jellies, i.e., a subclass for
 BlueJelly and RedJelly.
