@@ -1,0 +1,95 @@
+package jellydefense.test;
+
+import jellydefense.jellies.*;
+import jellydefense.towers.*;
+import java.util.*;
+
+public class TowerAttack {
+
+public static void playGame(ArrayList <Tower> t, Jelly jelly){
+
+    System.out.println("\n" + jelly.name);
+
+    for (int i = 0; jelly.health > 0; i++){
+
+        System.out.println( t.get(i % t.size()));
+
+        t.get(i % t.size()).attackJelly(jelly);
+    
+        System.out.println(jelly.name + ": " + jelly.health);
+
+            
+        }
+    }
+
+    public static void main(String[] args) {
+
+        ArrayList<Jelly> jellies = new ArrayList<Jelly>();
+        ArrayList<Tower> towers = new ArrayList<Tower>();
+        
+        
+        RedTower tower1 = new RedTower();
+        BlueTower tower2 = new BlueTower();
+        BlueRedTower tower3 = new BlueRedTower();
+        RedTower tower4 = new RedTower();
+        BlueTower tower5 = new BlueTower();
+
+        
+        RedJelly jelly1 = new RedJelly(100);
+        RedJelly jelly2 = new RedJelly(100);
+        RedJelly jelly3 = new RedJelly(100);
+        BlueJelly jelly4 = new BlueJelly(100);
+        RedJelly jelly5 = new RedJelly(100);
+        BlueJelly jelly6 = new BlueJelly(100);
+        RedJelly jelly7 = new RedJelly(100);
+        BlueJelly jelly8 = new BlueJelly(100);
+        RedJelly jelly9 = new RedJelly(100);
+        BlueJelly jelly10 = new BlueJelly(100);
+      
+      
+        towers.add(tower1);
+        towers.add(tower2);
+        towers.add(tower3);
+        towers.add(tower4);
+        towers.add(tower5);
+
+        
+        
+        jellies.add(jelly1);
+        jellies.add(jelly2);
+        jellies.add(jelly3);
+        jellies.add(jelly4);
+        jellies.add(jelly5);
+        jellies.add(jelly6);
+        jellies.add(jelly7);
+        jellies.add(jelly8);
+        jellies.add(jelly9);
+        jellies.add(jelly10); 
+
+        tower2.increaseLevel();
+        tower2.increaseLevel();
+
+        tower3.increaseLevel();
+
+        tower4.increaseLevel();
+        tower4.increaseLevel();
+        tower4.increaseLevel();
+        tower4.increaseLevel();
+
+
+
+       System.out.println(towers);
+       //System.out.println(jellies)
+       
+
+      playGame(towers, jelly1);
+       
+  
+
+
+       
+     
+    }
+    
+}
+
